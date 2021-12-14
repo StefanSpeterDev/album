@@ -1,28 +1,46 @@
 $black: #141616;
 $white: #fff;
 $grey: #8f8d8d;
-$green: #68F5D4;
+$green: #68f5d4;
+$dark-green: #4CB29A;
 
 // font
 @font-face {
   font-family: "avenir";
-  src: url('../font/Avenir.ttc') format('truetype');
+  src: url("../font/Avenir.ttc") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Monument Regular";
-  src: url('../font/MonumentExtended-Regular.otf') format('opentype');
+  src: url("../font/MonumentExtended-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Monument Bold";
-  src: url('../font/MonumentExtended-Ultrabold.otf') format('opentype');
+  src: url("../font/MonumentExtended-Ultrabold.otf") format("opentype");
   font-weight: bold;
   font-style: normal;
 }
 
-$font-avenir: 'Avenir';
-$font-monument: 'Monument Regular';
-$font-monument-bold: 'Monument Bold';
+$font-avenir: "Avenir";
+$font-monument: "Monument Regular";
+$font-monument-bold: "Monument Bold";
+
+// button
+a.green-button {
+    background-color: $green;
+    padding: 21px 44px;
+    color: $black;
+    text-decoration: none;
+    font-family: $font-monument-bold;
+    font-size: 28px;
+    text-transform: uppercase;
+    text-align: center;
+    &:hover {
+      background-color: $dark-green;
+      transition: 0.2s ease-in;
+      border: 1px solid $grey;
+    }
+  }

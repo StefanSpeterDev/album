@@ -16,6 +16,22 @@
   font-weight: bold;
   font-style: normal;
 }
+a.green-button {
+  background-color: #68f5d4;
+  padding: 21px 44px;
+  color: #141616;
+  text-decoration: none;
+  font-family: "Monument Bold";
+  font-size: 28px;
+  text-transform: uppercase;
+  text-align: center;
+}
+a.green-button:hover {
+  background-color: #4CB29A;
+  transition: 0.2s ease-in;
+  border: 1px solid #8f8d8d;
+}
+
 body {
   background-color: #141616;
   color: #fff;
@@ -41,23 +57,7 @@ nav {
   flex-direction: column;
 }
 .timer a {
-  display: flex;
-  align-self: center;
-  justify-self: center;
   margin-top: 60px;
-  background-color: #68F5D4;
-  padding: 21px 44px;
-  color: #141616;
-  text-decoration: none;
-  font-family: "Monument Bold";
-  font-size: 28px;
-  text-transform: uppercase;
-  text-align: center;
-}
-.timer a:hover {
-  background-color: white;
-  transition: 0.2s ease-in;
-  border: 1px solid #8f8d8d;
 }
 
 li {
