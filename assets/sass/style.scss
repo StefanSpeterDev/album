@@ -1,8 +1,25 @@
 @import 'import.scss';
 
 body {
-    overflow: hidden;
     background-color: $black;
+    color: $white;
 }
 
+.moon-fixed {
+    position: fixed;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin: 5% auto;
+    width: 500px;
+    height: 200px;
+    padding: 10px;
+    z-index: 200;
+    img#moon {
+        width: 100%;
+        height: auto;
+    }    
+}
 

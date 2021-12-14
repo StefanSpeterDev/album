@@ -1,6 +1,42 @@
+@font-face {
+  font-family: "avenir";
+  src: url("../font/Avenir.ttc") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Monument Regular";
+  src: url("../font/MonumentExtended-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Monument Bold";
+  src: url("../font/MonumentExtended-Ultrabold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
 body {
-  overflow: hidden;
   background-color: #141616;
+  color: #fff;
+}
+
+.moon-fixed {
+  position: fixed;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin: 5% auto;
+  width: 500px;
+  height: 200px;
+  padding: 10px;
+  z-index: 200;
+}
+.moon-fixed img#moon {
+  width: 100%;
+  height: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

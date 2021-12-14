@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/countdown.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/countdown.css" />
     <script src="./assets/js/jquery.min.js"></script>
     <title>Coming soon...</title>
-</head>
-<body>
-    <div class="wrapper-countdown">
-        <div class="artiste">
-            <img src="./assets/images/pnl.jpg" alt="PNL Music">
+  </head>
+  <body>
+    <nav>
+      <img src="./assets/images/logo.png" alt="" />
+    </nav>
+    <div class="timer">
+      <div class="wrapper-time">
+        <div id="countdown">
+          <ul>
+            <li style="display: none">days<span id="days"></span></li>
+            <li>Hours<span id="hours"></span></li>
+            <li class="deux-points">:</li>
+            <li>Minutes<span id="minutes"></span></li>
+            <li class="deux-points">:</li>
+            <li>Seconds<span id="seconds"></span></li>
+          </ul>
         </div>
-        <div class="artiste-info">
-            <div class="artiste-title">
-                <h1>PNL</h1>
-                <h3>Ademo & Nos</h3>
-            </div>
-            <div class="timer">
-                <span class="clock"></span>
-                <a href="./index.html">Découvrir la suite</a>
-            </div>
-        </div>
+      </div>
+      <a href="./index.html">Découvrir la suite</a>
     </div>
+
     <script src="./assets/js/countdown.js"></script>
-</body>
+  </body>
 </html>

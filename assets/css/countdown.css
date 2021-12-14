@@ -1,189 +1,98 @@
+@font-face {
+  font-family: "avenir";
+  src: url("../font/Avenir.ttc") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Monument Regular";
+  src: url("../font/MonumentExtended-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Monument Bold";
+  src: url("../font/MonumentExtended-Ultrabold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
 body {
   background-color: #141616;
+  color: #fff;
+  overflow-x: hidden;
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
-.wrapper-countdown {
+nav {
   display: flex;
-  width: 100%;
-  max-width: 1400px;
-  margin: 50px auto;
-  position: relative;
-}
-.wrapper-countdown .artiste {
-  margin-left: 50px;
-}
-.wrapper-countdown .artiste img {
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
-  height: 90%;
-}
-.wrapper-countdown .artiste-info {
-  background-color: #fff;
-  border-radius: 25px;
-  padding: 55px;
-  position: absolute;
-  top: 34%;
-  right: 100px;
-  width: 100%;
-  max-width: 230px;
-  height: auto;
-}
-.wrapper-countdown .artiste-info .artiste-title {
-  display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
-.wrapper-countdown .artiste-info .artiste-title h1 {
-  margin: 0px;
-  margin-right: 20px;
-  font-size: 45px;
+
+.timer {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.wrapper-countdown .artiste-info .artiste-title h3 {
-  color: #8f8d8d;
-  font-size: 20px;
-}
-.wrapper-countdown .artiste-info .timer a {
-  display: block;
-  margin-top: 30px;
-  background-color: #8f8d8d;
-  padding: 15px;
+.timer a {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  margin-top: 60px;
+  background-color: #68F5D4;
+  padding: 21px 44px;
   color: #141616;
-  width: 120px;
   text-decoration: none;
-  border-radius: 5px;
+  font-family: "Monument Bold";
+  font-size: 28px;
+  text-transform: uppercase;
+  text-align: center;
 }
-.wrapper-countdown .artiste-info .timer a:hover {
+.timer a:hover {
   background-color: white;
   transition: 0.2s ease-in;
   border: 1px solid #8f8d8d;
 }
 
-.clock {
-  position: relative;
-  font-family: monaco, consolas, "courier new", monospace;
-  font-size: 1.5rem;
-  line-height: 1.375;
+li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+  font-family: "Avenir";
   text-align: center;
 }
 
-.clock:before,
-.clock:after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  content: ":";
-  z-index: 2;
-  line-height: 1.15;
-  color: #333;
+li span#days, li span#hours, li span#minutes, li span#seconds {
+  display: block;
+  font-size: 4.5rem;
+  font-family: "Monument Regular";
 }
 
-.clock:before {
-  left: 2.325em;
+li.deux-points {
+  font-size: 4.5rem;
+  font-family: "Monument Regular";
 }
 
-.clock:after {
-  right: 2.325em;
-}
+@media all and (max-width: 768px) {
+  h1 {
+    font-size: calc(1.5rem * var(--smaller));
+  }
 
-.clock span {
-  position: relative;
-  display: inline-block;
-  padding: 0 0.25em;
-  margin: 0 0.06125em;
-  z-index: 1;
-  -webkit-transform: perspective(750);
-  -moz-transform: perspective(750);
-  -ms-transform: perspective(750);
-  transform: perspective(750);
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
+  li {
+    font-size: calc(1.125rem * var(--smaller));
+  }
 
-.clock span:first-child {
-  margin-left: 0;
-}
-
-.clock span:last-child {
-  margin-right: 0;
-}
-
-.clock span:nth-child(2),
-.clock span:nth-child(4) {
-  margin-right: 0.3em;
-}
-
-.clock span:nth-child(3),
-.clock span:nth-child(5) {
-  margin-left: 0.3em;
-}
-
-.clock span:before,
-.clock span:after {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  color: #eee;
-  text-shadow: 0 1px 0 #fff;
-  background: #333;
-  border-radius: 0.125em;
-  outline: 1px solid transparent;
-  /* fix jagged edges in ff */
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transition: -webkit-transform 0.75s, opacity 0.75s;
-  -moz-transition: -moz-transform 0.75s, opacity 0.75s;
-  -ms-transition: -ms-transform 0.75s, opacity 0.75s;
-  transition: transform 0.75s, opacity 0.75s;
-}
-
-.clock span:before {
-  opacity: 1;
-  z-index: 1;
-  content: attr(data-old);
-  -webkit-transform-origin: 0 0;
-  -moz-transform-origin: 0 0;
-  -ms-transform-origin: 0 0;
-  transform-origin: 0 0;
-  -webkit-transform: translate3d(0, 0, 0) rotateX(0);
-  -moz-transform: translate3d(0, 0, 0) rotateX(0);
-  -ms-transform: translate3d(0, 0, 0) rotateX(0);
-  transform: translate3d(0, 0, 0) rotateX(0);
-}
-
-.clock span:after {
-  opacity: 0;
-  z-index: 2;
-  content: attr(data-now);
-  -webkit-transform-origin: 0 100%;
-  -moz-transform-origin: 0 100%;
-  -ms-transform-origin: 0 100%;
-  transform-origin: 0 100%;
-  -webkit-transform: translate3d(0, -102.5%, 0) rotateX(90deg);
-  -moz-transform: translate3d(0, -102.5%, 0) rotateX(90deg);
-  -ms-transform: translate3d(0, -102.5%, 0) rotateX(90deg);
-  transform: translate3d(0, -102.5%, 0) rotateX(90deg);
-}
-
-.clock .flip:before {
-  opacity: 0;
-  -webkit-transform: translate3d(0, 102.5%, 0) rotateX(-90deg);
-  -moz-transform: translate3d(0, 102.5%, 0) rotateX(-90deg);
-  -ms-transform: translate3d(0, 102.5%, 0) rotateX(-90deg);
-  transform: translate3d(0, 102.5%, 0) rotateX(-90deg);
-}
-
-.clock .flip:after {
-  opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0) rotateX(0);
-  -moz-transform: translate3d(0, 0, 0) rotateX(0);
-  -ms-transform: translate3d(0, 0, 0) rotateX(0);
-  transform: translate3d(0, 0, 0) rotateX(0);
+  li span {
+    font-size: calc(3.375rem * var(--smaller));
+  }
 }
 
 /*# sourceMappingURL=countdown.css.map */

@@ -1,3 +1,28 @@
 $black: #141616;
 $white: #fff;
 $grey: #8f8d8d;
+$green: #68F5D4;
+
+// font
+@font-face {
+  font-family: "avenir";
+  src: url('../font/Avenir.ttc') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Monument Regular";
+  src: url('../font/MonumentExtended-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Monument Bold";
+  src: url('../font/MonumentExtended-Ultrabold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+$font-avenir: 'Avenir';
+$font-monument: 'Monument Regular';
+$font-monument-bold: 'Monument Bold';
