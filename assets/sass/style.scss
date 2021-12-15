@@ -1,25 +1,48 @@
-@import 'import.scss';
+@import "import.scss";
 
-body {
-    background-color: $black;
-    color: $white;
+.wrapper-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  p.intro {
+    width: 320px;
+    text-align: center;
+    margin-bottom: 72px;
+    padding-top: 30px;
+  }
+  .wrapper-img {
+    position: relative;
+    margin-bottom: 30px;
+    .item {
+      z-index: 100;
+      padding: 5px;
+    }
+    .circle {
+      border-radius: 50%;
+      background-color: transparent;
+      border: 3px solid $white;
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      top: -25px;
+      left: -27px;
+      opacity: 0;
+      animation: scaleIn 4s infinite cubic-bezier(.26,.56,.58,.99);
+    }
+  }
+  a {
+      margin-bottom: 30px;
+  }
 }
 
-.moon-fixed {
-    position: fixed;
-    left: 50%;
-    -ms-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    margin: 5% auto;
-    width: 500px;
-    height: 200px;
-    padding: 10px;
-    z-index: 200;
-    img#moon {
-        width: 100%;
-        height: auto;
-    }    
-}
-
+@keyframes scaleIn {
+    from {
+      transform: scale(.5, .5);
+      opacity: .5;
+    }
+    to {
+      transform: scale(1.17, 1.17);
+      opacity: 0;
+    }
+  }

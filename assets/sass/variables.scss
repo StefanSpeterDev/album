@@ -1,8 +1,24 @@
 $black: #141616;
+$dark-black: #010101;
 $white: #fff;
 $grey: #8f8d8d;
 $green: #68f5d4;
-$dark-green: #4CB29A;
+$dark-green: #4cb29a;
+$pink: #cc4e78;
+
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  background-color: $black;
+  color: $white;
+}
+
+.green {
+  color: $green;
+}
 
 // font
 @font-face {
@@ -28,19 +44,49 @@ $font-avenir: "Avenir";
 $font-monument: "Monument Regular";
 $font-monument-bold: "Monument Bold";
 
+@mixin button($color) {
+  padding: 21px 44px;
+  color: $black;
+  text-decoration: none;
+  font-family: $font-monument-bold;
+  font-size: 28px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: $color;
+  display: block;
+  width: 265px;
+  &:hover {
+    background-color: $color;
+    transition: 0.2s ease-in;
+    border: 1px solid $grey;
+  }
+}
 // button
 a.green-button {
-    background-color: $green;
-    padding: 21px 44px;
-    color: $black;
-    text-decoration: none;
-    font-family: $font-monument-bold;
-    font-size: 28px;
-    text-transform: uppercase;
-    text-align: center;
-    &:hover {
-      background-color: $dark-green;
-      transition: 0.2s ease-in;
-      border: 1px solid $grey;
-    }
-  }
+  @include button($green);
+}
+
+a.pink-button {
+  @include button($pink);
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-monument;
+}
+p {
+  font-family: $font-avenir;
+}
+
+p.p-18 {
+  font-size: 18px;
+}
+
+.banner-qlf {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $dark-black;
+  height: 208px;
+}

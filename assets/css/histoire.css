@@ -89,51 +89,36 @@ p.p-18 {
   height: 208px;
 }
 
-.wrapper-info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+body {
+  overflow-x: hidden;
+  background-color: #010101;
 }
-.wrapper-info p.intro {
-  width: 320px;
-  text-align: center;
-  margin-bottom: 72px;
-  padding-top: 30px;
-}
-.wrapper-info .wrapper-img {
+
+.qlf-wrapper {
   position: relative;
-  margin-bottom: 30px;
 }
-.wrapper-info .wrapper-img .item {
-  z-index: 100;
-  padding: 5px;
-}
-.wrapper-info .wrapper-img .circle {
-  border-radius: 50%;
-  background-color: transparent;
-  border: 3px solid #fff;
-  width: 150px;
-  height: 150px;
+.qlf-wrapper .text-left {
   position: absolute;
-  top: -25px;
-  left: -27px;
-  opacity: 0;
-  animation: scaleIn 4s infinite cubic-bezier(0.26, 0.56, 0.58, 0.99);
+  top: 25%;
+  left: 120px;
+  width: 590px;
 }
-.wrapper-info a {
-  margin-bottom: 30px;
+.qlf-wrapper .text-left h1 {
+  font-size: 64px;
+  margin-block-start: 0.33em;
+  margin-block-end: 0.33em;
+}
+.qlf-wrapper .text-left h4 {
+  margin-block-start: 0.33em;
+  margin-block-end: 0.33em;
+  margin-bottom: 10px;
+  font-size: 40px;
+  color: #F9F8F8;
+  opacity: 0.4;
+  font-family: "Monument Regular";
+}
+.qlf-wrapper .text-left a.pink-button {
+  margin-top: 32px;
 }
 
-@keyframes scaleIn {
-  from {
-    transform: scale(0.5, 0.5);
-    opacity: 0.5;
-  }
-  to {
-    transform: scale(1.17, 1.17);
-    opacity: 0;
-  }
-}
-
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=histoire.css.map */
