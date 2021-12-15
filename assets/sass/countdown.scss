@@ -32,7 +32,7 @@ body {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    animation: zoomin 15s ease-in infinite;
+    animation: zoomin 20s ease-in infinite;
     transition: all .5s ease-in-out;
     overflow: hidden;
   }
@@ -43,7 +43,7 @@ body {
     height:100%;
     text-align:center;
     background: none;
-    animation: zoomout 15s ease-in infinite;
+    animation: zoomout 20s ease-in infinite;
     transition: all .2s ease-in-out;
     overflow: hidden;
   }
