@@ -3,23 +3,77 @@
 body {
   background-color: $black;
   color: $white;
-  overflow-x: hidden;
-  background-image: url('../images/background.jpg');
+  /* width:100vw;
+    height:100vh; */
+  overflow: hidden;
+/*   background-image: url('../images/background.jpg');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size: 110% 110%;
+  animation: shrink 5s infinite alternate; */
 }
+.header-wrapper {
+    overflow: hidden;
+    width:100%;
+    height:100%;
+    text-align:center;
+  }
+
+.zoominheader {
+    width:100%;
+    height:100%;
+    text-align:center;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    animation: zoomin 15s ease-in infinite;
+    transition: all .5s ease-in-out;
+    overflow: hidden;
+  }
+  
+  /* The innermost element*/
+  .zoomoutheader {
+    width:100%;
+    height:100%;
+    text-align:center;
+    background: none;
+    animation: zoomout 15s ease-in infinite;
+    transition: all .2s ease-in-out;
+    overflow: hidden;
+  }
+  
+
+  @keyframes zoomin {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.5);}
+    100% {transform: scale(1);}
+  } /*End of Zoom in Keyframes */
+  
+  @keyframes zoomout {
+      0% {transform: scale(1);}
+    50% {transform: scale(0.67);}
+    100% {transform: scale(1);}
+  }/*End of Zoom out Keyframes */
 
 nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
 }
 
 .timer {
   display: flex;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  min-height: 80vh;
   justify-content: center;
   align-items: center;
   flex-direction: column;
