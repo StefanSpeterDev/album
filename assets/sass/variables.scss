@@ -5,7 +5,7 @@ $grey: #8f8d8d;
 $green: #68f5d4;
 $dark-green: #4cb29a;
 $pink: #cc4e78;
-
+$red: #e1003a;
 html,
 body {
   padding: 0px;
@@ -44,21 +44,35 @@ $font-avenir: "Avenir";
 $font-monument: "Monument Regular";
 $font-monument-bold: "Monument Bold";
 
-@mixin button($color) {
+@mixin button($color: "", $gradient: "", $rgb: "", $font-size: "") {
   padding: 21px 44px;
   color: $black;
   text-decoration: none;
   font-family: $font-monument-bold;
-  font-size: 28px;
+  @if $font-size != "" {
+    font-size: $font-size;
+  } @else {
+    font-size: 28px;
+  }
   text-transform: uppercase;
   text-align: center;
-  background-color: $color;
+  @if $color != "" {
+    background-color: $color;
+  } @else {
+    background: rgb(247, 169, 1);
+    background: $gradient;
+  }
   display: block;
   width: 265px;
   &:hover {
-    background-color: $color;
     transition: 0.2s ease-in;
     border: 1px solid $grey;
+    filter: brightness(85%);
+  }
+  &.btn-qlf {
+      font-size: 16px;
+      width: 235px;
+      padding: 20px 43px;
   }
 }
 // button
@@ -68,6 +82,34 @@ a.green-button {
 
 a.pink-button {
   @include button($pink);
+}
+
+a.red-button {
+  @include button($red);
+}
+
+a.orange-button {
+  @include button(
+    "",
+    linear-gradient(
+      45deg,
+      rgba(247, 169, 1, 1) 35%,
+      rgba(212, 66, 114, 1) 100%
+    ),
+    rgb(247, 169, 1),
+  );
+}
+
+a.purple-button {
+  @include button(
+    "",
+    linear-gradient(
+      45deg,
+      rgba(82, 168, 222, 1) 35%,
+      rgba(170, 46, 147, 1) 100%
+    ),
+    rgb(82, 168, 222),
+  );
 }
 
 h1,

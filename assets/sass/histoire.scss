@@ -1,5 +1,44 @@
 @import "import";
 
+@mixin block-musique {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba($color: #f9f8f8, $alpha: 0.6);
+  height: auto;
+  width: 205px;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 18px 16px 18px;
+  img#pochette {
+    margin-bottom: 16px;
+  }
+  p {
+    font-family: $font-avenir;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: lighter;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-bottom: 8px;
+  }
+  h3 {
+    font-family: $font-monument;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-bottom: 8px;
+  }
+  button {
+    background-color: transparent;
+    border: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
 body {
   overflow-x: hidden;
   background-color: $dark-black;
@@ -12,23 +51,98 @@ body {
     top: 25%;
     left: 120px;
     width: 590px;
+  }
+  .text-right {
+    position: absolute;
+    top: 25%;
+    right: 120px;
+    width: 590px;
+    text-align: right;
+    .wrapper-btn {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+  .text-left,
+  .text-right {
     h1 {
-        font-size: 64px;
-        margin-block-start: 0.33em;
-        margin-block-end: .33em;
-
+      font-size: 64px;
+      margin-block-start: 0.33em;
+      margin-block-end: 0.33em;
     }
     h4 {
-        margin-block-start: .33em;
-        margin-block-end: .33em;
-        margin-bottom: 10px;
-        font-size: 40px;
-        color: #F9F8F8;
-        opacity: 0.4;
-        font-family: $font-monument;
+      margin-block-start: 0.33em;
+      margin-block-end: 0.33em;
+      margin-bottom: 10px;
+      font-size: 40px;
+      color: #f9f8f8;
+      opacity: 0.4;
+      font-family: $font-monument;
     }
-    a.pink-button {
-        margin-top: 32px;
+    a {
+      margin-top: 32px;
+    }
+    .dll {
+      position: relative;
+      width: 710px;
+      margin-bottom: 30px;
+      img {
+        position: absolute;
+        right: -47px;
+        bottom: -20px;
+      }
+    }
+    .deux {
+      position: relative;
+      img {
+        position: absolute;
+        right: -20px;
+        bottom: -20px;
+      }
+    }
+    p.p-dll {
+      margin-top: 50px;
+    }
+  }
+  .wrapper-btn-center {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .block-musique-right {
+    @include block-musique;
+    position: absolute;
+    top: 55%;
+    right: 120px;
+  }
+  .block-musique-left {
+    @include block-musique;
+    position: absolute;
+    top: 55%;
+    left: 120px;
+  }
+}
+
+footer {
+  position: relative;
+  #lune {
+    position: absolute;
+    right: 0;
+    bottom: -150px;
+  }
+  #shadow {
+    position: absolute;
+    right: 0;
+    bottom: -150px;
+    z-index: 999;
+  }
+  .block-rs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .rs {
+      @include rs;
     }
   }
 }
