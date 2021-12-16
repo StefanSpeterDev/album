@@ -1,1 +1,32 @@
 @import 'variables.scss';
+
+@mixin rs {
+    margin: 15px;
+    padding: 8px 8px;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      margin-left: 2px;
+    }
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      border: 1px solid $white;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: all .4s;
+    }
+    &:hover::before {
+      border-color: $green;
+      color: $green;
+      fill: $green;
+      transform: rotate(45deg);
+    }
+  }

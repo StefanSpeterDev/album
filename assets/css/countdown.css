@@ -44,9 +44,14 @@ a.green-button {
   width: 265px;
 }
 a.green-button:hover {
-  background-color: #68f5d4;
   transition: 0.2s ease-in;
   border: 1px solid #8f8d8d;
+  filter: brightness(85%);
+}
+a.green-button.btn-qlf {
+  font-size: 16px;
+  width: 235px;
+  padding: 20px 43px;
 }
 
 a.pink-button {
@@ -62,9 +67,85 @@ a.pink-button {
   width: 265px;
 }
 a.pink-button:hover {
-  background-color: #cc4e78;
   transition: 0.2s ease-in;
   border: 1px solid #8f8d8d;
+  filter: brightness(85%);
+}
+a.pink-button.btn-qlf {
+  font-size: 16px;
+  width: 235px;
+  padding: 20px 43px;
+}
+
+a.red-button {
+  padding: 21px 44px;
+  color: #141616;
+  text-decoration: none;
+  font-family: "Monument Bold";
+  font-size: 28px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #e1003a;
+  display: block;
+  width: 265px;
+}
+a.red-button:hover {
+  transition: 0.2s ease-in;
+  border: 1px solid #8f8d8d;
+  filter: brightness(85%);
+}
+a.red-button.btn-qlf {
+  font-size: 16px;
+  width: 235px;
+  padding: 20px 43px;
+}
+
+a.orange-button {
+  padding: 21px 44px;
+  color: #141616;
+  text-decoration: none;
+  font-family: "Monument Bold";
+  font-size: 28px;
+  text-transform: uppercase;
+  text-align: center;
+  background: #f7a901;
+  background: linear-gradient(45deg, #f7a901 35%, #d44272 100%);
+  display: block;
+  width: 265px;
+}
+a.orange-button:hover {
+  transition: 0.2s ease-in;
+  border: 1px solid #8f8d8d;
+  filter: brightness(85%);
+}
+a.orange-button.btn-qlf {
+  font-size: 16px;
+  width: 235px;
+  padding: 20px 43px;
+}
+
+a.purple-button {
+  padding: 21px 44px;
+  color: #141616;
+  text-decoration: none;
+  font-family: "Monument Bold";
+  font-size: 28px;
+  text-transform: uppercase;
+  text-align: center;
+  background: #f7a901;
+  background: linear-gradient(45deg, #52a8de 35%, #aa2e93 100%);
+  display: block;
+  width: 265px;
+}
+a.purple-button:hover {
+  transition: 0.2s ease-in;
+  border: 1px solid #8f8d8d;
+  filter: brightness(85%);
+}
+a.purple-button.btn-qlf {
+  font-size: 16px;
+  width: 235px;
+  padding: 20px 43px;
 }
 
 h1,
