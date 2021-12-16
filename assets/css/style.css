@@ -170,6 +170,10 @@ p.p-18 {
   height: 208px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .wrapper-info {
   display: flex;
   justify-content: center;

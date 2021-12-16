@@ -32,15 +32,23 @@
         <img src="./assets/images/qlf-logo.png" alt="" id="pochette" />
         <p>Que la famille</p>
         <h3>Je vis, je visser</h3>
-        <button>
+        <button id="btn-jevis" onClick="togglePlayJeVis()">
           <lottie-player
+            id="player-jevis"
             src="https://assets5.lottiefiles.com/packages/lf20_rRD7hy.json"
             background="transparent"
             speed="0.5"
             style="width: 32px; height: 32px"
             loop
-            autoplay
-          ></lottie-player>
+            ><audio
+              muted="muted"
+              autoplay="true"
+              id="audio-je-vis"
+              src="./assets/sounds/pnl-je-vis-je-visser.mp3"
+            >
+              Your browser does not support the <code>audio</code> element.
+            </audio></lottie-player
+          >
         </button>
       </div>
     </div>
@@ -77,15 +85,23 @@
         <img src="./assets/images/lemonde-logo.png" alt="" id="pochette" />
         <p>Le monde chico</p>
         <h3>Le monde ou rien</h3>
-        <button>
+        <button onclick="togglePlayLeMonde()">
           <lottie-player
+            id="player-lemonde"
             src="https://assets5.lottiefiles.com/packages/lf20_rRD7hy.json"
             background="transparent"
             speed="1"
             style="width: 32px; height: 32px"
             loop
-            autoplay
           ></lottie-player>
+          <audio
+            muted="muted"
+            autoplay="false"
+            id="audio-le-monde"
+            src="./assets/sounds/pnl-le-monde-ou-rien.mp3"
+          >
+            Your browser does not support the <code>audio</code> element.
+          </audio>
         </button>
       </div>
     </div>
@@ -122,15 +138,23 @@
         <img src="./assets/images/dll-logo.png" alt="" id="pochette" />
         <p>Dans la légende</p>
         <h3>DA</h3>
-        <button>
+        <button onclick="togglePlayDa()">
           <lottie-player
             src="https://assets5.lottiefiles.com/packages/lf20_rRD7hy.json"
             background="transparent"
             speed="0.5"
             style="width: 32px; height: 32px"
             loop
-            autoplay
+            id="player-da"
           ></lottie-player>
+          <audio
+            muted="muted"
+            autoplay="false"
+            id="audio-da"
+            src="./assets/sounds/pnl-da.mp3"
+          >
+            Your browser does not support the <code>audio</code> element.
+          </audio>
         </button>
       </div>
     </div>
@@ -173,15 +197,23 @@
         <img src="./assets/images/2freres-logo.png" alt="" id="pochette" />
         <p>Deux frères</p>
         <h3>Au DD</h3>
-        <button>
+        <button onclick="togglePlayDd()">
           <lottie-player
             src="https://assets5.lottiefiles.com/packages/lf20_rRD7hy.json"
             background="transparent"
             speed="0.5"
             style="width: 32px; height: 32px"
             loop
-            autoplay
+            id='player-dd'
           ></lottie-player>
+          <audio
+            muted="muted"
+            autoplay="false"
+            id="audio-dd"
+            src="./assets/sounds/pnl-dd.mp3"
+          >
+            Your browser does not support the <code>audio</code> element.
+          </audio>
         </button>
       </div>
     </div>
@@ -205,6 +237,7 @@
         </div>
       </div>
     </footer>
+    <script src="./assets/js/jquery.min.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
     <script src="./assets/js/histoire.js"></script>

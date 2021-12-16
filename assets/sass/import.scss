@@ -1,5 +1,7 @@
 @import 'variables.scss';
-
+html {
+  scroll-behavior: smooth;
+}
 @mixin rs {
     margin: 15px;
     padding: 8px 8px;
