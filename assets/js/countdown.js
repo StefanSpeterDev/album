@@ -1,58 +1,48 @@
-(function () {
-  const second = 1000,
-    minute = second * 60,
-    hour = minute * 60,
-    day = hour * 24;
+function startTimer(duration, houres, min, sec) {
+  var timer = duration,
+    houres,
+    minutes,
+    seconds;
+  var moon = $(".zoominheader");
+  x = setInterval(function () {
+    minutes = Math.floor((timer % 3600) / 60);
+    seconds = Math.floor((timer % 3600) % 60);
+    hours = Math.floor(timer / 3600);
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+    houres.text(hours);
+    min.text(minutes);
+    sec.text(seconds);
 
-  //I'm adding this section so I don't have to keep updating this pen every year :-)
-  //remove this if you don't need it
-  let today = new Date(),
-    dd = String(today.getDate()).padStart(2, "0"),
-    mm = String(today.getMonth() + 1).padStart(2, "0"),
-    yyyy = today.getFullYear(),
-    nextYear = yyyy + 1,
-    dayMonth = "12/16/",
-    birthday = dayMonth + yyyy;
+    if (--timer < 0) {
+      clearInterval(x);
+      $(".wrapper-time").css("animation", "disappear 3s  forwards");
+      $("#button-disappear").css("animation", "disappear 3s  forwards");
+      $(".zoomoutheader").css("animation", "disappear 3s forwards");
 
-  today = mm + "/" + dd + "/" + yyyy;
-  if (today > birthday) {
-    birthday = dayMonth + nextYear;
-  }
-  //end
+      moon.fadeOut();
+      moon.css({
+        "background-size": "cover",
+        "height": "100%",
+        "animation": "moonup 3s ease-in forwards",
+        "overflow": "visible",
+        "margin-top": "-250px"
+      });
+      moon
+        .css(
+          "background-image",
+          'url("' + "../assets/images/background_long_final.png" + '")'
+        ) //Change BG
+        .fadeIn(); //FadeIn
+      $(".header-wrapper .block-rs").css("top", "30%");
+    }
+  }, 1000);
+}
 
-  const countDown = new Date(birthday).getTime();
-  var moon = $('.zoominheader');
-    x = setInterval(function () {
-      const now = new Date().getTime(),
-        distance = countDown - now;
-
-      (document.getElementById("days").innerText = Math.floor(distance / day)),
-        (document.getElementById("hours").innerText = Math.floor(
-          (distance % day) / hour
-          
-        )),
-        (document.getElementById("minutes").innerText = Math.floor(
-          (distance % hour) / minute
-        )),
-        (document.getElementById("seconds").innerText = Math.floor(
-          (distance % minute) / second
-        ));
-      //do something later when date is reached
-      if (distance < 0) {
-        clearInterval(x);
-        moon.css({
-          'background-size':'auto',
-          'height':'100%',
-          'animation':'moonup 5s ease-in forwards',
-          'background-image': 'url("' + '../assets/images/background.jpg' +'")',
-          'padding-top' : '66.64%',
-          'overflow-y' : 'visible'
-        });
-        $('.zoomoutheader').css('animation', 'none');
-        $('nav').css('display', 'none');
-        $('.wrapper-time').css('animation', 'disappear 5s ease-in forwards');
-        $('.green-button').css('animation', 'disappear 10s ease-in forwards');
-      }
-      //seconds
-    }, 0);
-})();
+jQuery(function ($) {
+  var fiveMinutes = 60 * 0.03;
+  min = $("#minutes");
+  hours = $("#hours");
+  sec = $("#seconds");
+  startTimer(fiveMinutes, hours, min, sec);
+});

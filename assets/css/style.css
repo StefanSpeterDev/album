@@ -100,6 +100,30 @@ a.red-button.btn-qlf {
   padding: 20px 43px;
 }
 
+a.black-button {
+  padding: 21px 44px;
+  color: #141616;
+  text-decoration: none;
+  font-family: "Monument Bold";
+  font-size: 28px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #010101;
+  display: block;
+  width: 265px;
+  color: #68f5d4;
+}
+a.black-button:hover {
+  transition: 0.2s ease-in;
+  border: 1px solid #8f8d8d;
+  filter: brightness(85%);
+}
+a.black-button.btn-qlf {
+  font-size: 16px;
+  width: 235px;
+  padding: 20px 43px;
+}
+
 a.orange-button {
   padding: 21px 44px;
   color: #141616;
@@ -172,6 +196,8 @@ p.p-18 {
 
 html {
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 
 .wrapper-info {

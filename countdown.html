@@ -1,48 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/countdown.css" />
-    <title>Coming soon...</title>
-  </head>
-  <body>
-    <div class="header-wrapper">
-      <div class="zoominheader bg1">
-        <div class="zoomoutheader">
-          <nav>
-            <img src="./assets/images/logo.png" alt="" />
-          </nav>
-          <div class="timer">
-            <div class="wrapper-time">
-              <div id="countdown">
-                <ul>
-                  <li style="display: none">days<span id="days"></span></li>
-                  <li>Hours<span id="hours"></span></li>
-                  <li class="deux-points">:</li>
-                  <li>Minutes<span id="minutes"></span></li>
-                  <li class="deux-points">:</li>
-                  <li>Seconds<span id="seconds"></span></li>
-                </ul>
-              </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/css/countdown.css" />
+  <title>Coming soon...</title>
+</head>
+
+<body>
+  <div class="header-wrapper">
+    <div class="zoominheader">
+      <div class="zoomoutheader">
+        <nav>
+          <img src="./assets/images/logo.png" alt="" />
+        </nav>
+        <div class="timer">
+          <div class="wrapper-time">
+            <div id="countdown">
+              <ul>
+                <li>Hours<span id="hours"></span></li>
+                <li class="deux-points">:</li>
+                <li>Minutes<span id="minutes"></span></li>
+                <li class="deux-points">:</li>
+                <li>Seconds<span id="seconds"></span></li>
+              </ul>
             </div>
-            <a class="green-button" href="./histoire.html">Découvrir la suite</a>
+            <div id="the-final-countdown">
+              <p></p>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="block-rs">
-        <div class="rs">
-          <img src="./assets/images/facebook.svg" alt="" />
-        </div>
-        <div class="rs">
-          <img src="./assets/images/instagram.svg" alt="" />
-        </div>
-        <div class="rs">
-          <img src="./assets/images/twitter.svg" alt="" />
+          <a class="green-button" id="button-disappear" href="./histoire.html">Découvrir la suite</a>
         </div>
       </div>
     </div>
-    <script src="./assets/js/jquery.min.js"></script>
-    <script src="./assets/js/countdown.js"></script>
-  </body>
+    <div class="block-rs">
+      <div class="rs">
+        <img src="./assets/images/facebook.svg" alt="" />
+      </div>
+      <div class="rs">
+        <img src="./assets/images/instagram.svg" alt="" />
+      </div>
+      <div class="rs">
+        <img src="./assets/images/twitter.svg" alt="" />
+      </div>
+    </div>
+    <div class="wrapper-post-timer">
+      <div class="buttons">
+        <a href="#" class="green-button">Pré-commander</a>
+        <a href="#tracklist" class="black-button">Voir la tracklist</a>
+      </div>
+      <div class="banner-qlf">
+        <img src="./assets/images/blue-banner.png" alt="" />
+      </div>
+      <div id="tracklist">
+        <div class="wrapper-list">
+          <div class="left">
+            <ol>
+              <li>
+                <hr class="tiret"><span>Hégire</span>
+              </li>
+              <li>
+                <hr class="tiret"><span>A l'agonie</span>
+              </li>
+              <li>
+                <hr class="tiret"><span>Résurgence</span>
+              </li>
+              <li>
+                <hr class="tiret"><span>Tour Eiffel</span>
+              </li>
+              <li>
+                <hr class="tiret"><span>Himalaya</span>
+              </li>
+              <li>
+                <hr class="tiret"><span>Big Bang</span>
+              </li>
+              <li>
+                <hr class="tiret"><span>Sora</span>
+              </li>
+            </ol>
+          </div>
+          <div class="right">
+            <ol start="8">
+              <li>
+                <hr class="tiret"><span>Planète namek</span>
+              </li>
+              <li>
+                <hr class="tiret"><span>N.A.S.A</span>
+              </li>
+              <li>
+                <hr class="tiret"><span>Enigma</span>
+              </li>
+              <li>
+                <hr class="tiret"><span>Le coeur qui brûle</span>
+              </li>
+              <li>
+                <hr class="tiret"><span>Sauver la Terre</span>
+              </li>
+              <li>
+                <hr class="tiret"><span>Supernova</span>
+              </li>
+              <li>
+                <hr class="tiret"><span>Tarik et Nabil</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <img id="moon-footer" src="./assets/images/footer-moon.png" alt="">
+        <img id="shade" src="./assets/images/green-shade.png" alt="">
+      </footer>
+
+    </div>
+  </div>
+  <script src="./assets/js/jquery.min.js"></script>
+  <script src="./assets/js/countdown.js"></script>
+</body>
+
 </html>

@@ -88,6 +88,11 @@ a.red-button {
   @include button($red);
 }
 
+a.black-button{
+  @include button($dark-black);
+  color: $green;
+}
+
 a.orange-button {
   @include button(
     "",
