@@ -461,4 +461,215 @@ li.deux-points {
   opacity: 1;
 }
 
+body {
+  overflow-x: hidden;
+  background-color: #010101;
+}
+
+.qlf-wrapper {
+  position: relative;
+}
+.qlf-wrapper .text-left {
+  position: absolute;
+  top: 25%;
+  left: 120px;
+  width: 590px;
+  text-align: left;
+}
+.qlf-wrapper .text-right {
+  position: absolute;
+  top: 25%;
+  right: 120px;
+  width: 590px;
+  text-align: right;
+}
+.qlf-wrapper .text-right .wrapper-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+.qlf-wrapper .text-left h1,
+.qlf-wrapper .text-right h1 {
+  font-size: 64px;
+  margin-block-start: 0.33em;
+  margin-block-end: 0.33em;
+}
+.qlf-wrapper .text-left h4,
+.qlf-wrapper .text-right h4 {
+  margin-block-start: 0.33em;
+  margin-block-end: 0.33em;
+  margin-bottom: 10px;
+  font-size: 40px;
+  color: #f9f8f8;
+  opacity: 0.4;
+  font-family: "Monument Regular";
+}
+.qlf-wrapper .text-left a,
+.qlf-wrapper .text-right a {
+  margin-top: 32px;
+}
+.qlf-wrapper .text-left .dll,
+.qlf-wrapper .text-right .dll {
+  position: relative;
+  width: 710px;
+  margin-bottom: 30px;
+}
+.qlf-wrapper .text-left .dll img,
+.qlf-wrapper .text-right .dll img {
+  position: absolute;
+  right: -47px;
+  bottom: -20px;
+}
+.qlf-wrapper .text-left .deux,
+.qlf-wrapper .text-right .deux {
+  position: relative;
+}
+.qlf-wrapper .text-left .deux img,
+.qlf-wrapper .text-right .deux img {
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+}
+.qlf-wrapper .text-left p.p-dll,
+.qlf-wrapper .text-right p.p-dll {
+  margin-top: 50px;
+}
+.qlf-wrapper .wrapper-btn-center {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.qlf-wrapper .block-musique-right {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(249, 248, 248, 0.6);
+  height: auto;
+  width: 205px;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 18px 16px 18px;
+  position: absolute;
+  top: 55%;
+  right: 120px;
+}
+.qlf-wrapper .block-musique-right img#pochette {
+  margin-bottom: 16px;
+}
+.qlf-wrapper .block-musique-right p {
+  font-family: "Avenir";
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: lighter;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-bottom: 8px;
+}
+.qlf-wrapper .block-musique-right h3 {
+  font-family: "Monument Regular";
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-bottom: 8px;
+}
+.qlf-wrapper .block-musique-right button {
+  background-color: transparent;
+  border: none;
+}
+.qlf-wrapper .block-musique-right button:hover {
+  cursor: pointer;
+}
+.qlf-wrapper .block-musique-left {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(249, 248, 248, 0.6);
+  height: auto;
+  width: 205px;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 18px 16px 18px;
+  position: absolute;
+  top: 55%;
+  left: 120px;
+}
+.qlf-wrapper .block-musique-left img#pochette {
+  margin-bottom: 16px;
+}
+.qlf-wrapper .block-musique-left p {
+  font-family: "Avenir";
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: lighter;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-bottom: 8px;
+}
+.qlf-wrapper .block-musique-left h3 {
+  font-family: "Monument Regular";
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-bottom: 8px;
+}
+.qlf-wrapper .block-musique-left button {
+  background-color: transparent;
+  border: none;
+}
+.qlf-wrapper .block-musique-left button:hover {
+  cursor: pointer;
+}
+
+footer {
+  position: relative;
+}
+footer #lune {
+  position: absolute;
+  right: 0;
+  bottom: -150px;
+}
+footer #shadow {
+  position: absolute;
+  right: 0;
+  bottom: -150px;
+  z-index: 999;
+}
+footer .block-rs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .block-rs .rs {
+  margin: 15px;
+  padding: 8px 8px;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .block-rs .rs img {
+  margin-left: 2px;
+}
+footer .block-rs .rs::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border: 1px solid #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.4s;
+}
+footer .block-rs .rs:hover::before {
+  border-color: #68f5d4;
+  color: #68f5d4;
+  fill: #68f5d4;
+  transform: rotate(45deg);
+}
+
 /*# sourceMappingURL=countdown.css.map */
