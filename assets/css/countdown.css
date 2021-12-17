@@ -379,7 +379,7 @@ li.deux-points {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-bottom: 400px;
+  margin-bottom: 100px;
 }
 .wrapper-post-timer #tracklist .wrapper-list {
   display: flex;
@@ -416,7 +416,7 @@ li.deux-points {
   margin-inline-end: 0;
 }
 .wrapper-post-timer #tracklist .wrapper-list ol li span {
-  margin-left: 178px;
+  margin-left: 78px;
 }
 .wrapper-post-timer footer {
   position: relative;
@@ -435,6 +435,30 @@ li.deux-points {
   position: absolute;
   right: 0;
   bottom: 0;
+}
+
+.d-none {
+  display: none;
+}
+
+.cover {
+  position: relative;
+  margin: 100px auto;
+  width: 600px;
+}
+.cover img {
+  width: 600px;
+  height: auto;
+}
+.cover .image-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+.cover .image-hover:hover {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=countdown.css.map */

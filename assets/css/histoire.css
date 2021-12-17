@@ -213,6 +213,7 @@ body {
   top: 25%;
   left: 120px;
   width: 590px;
+  text-align: left;
 }
 .qlf-wrapper .text-right {
   position: absolute;

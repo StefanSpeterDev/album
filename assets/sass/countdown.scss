@@ -154,7 +154,7 @@ li.deux-points {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-bottom: 400px;
+    margin-bottom: 100px;
   }
   #tracklist {
     .wrapper-list {
@@ -190,7 +190,7 @@ li.deux-points {
             margin-inline-end: 0;
           }
           span {
-            margin-left: 178px;
+            margin-left: 78px;
           }
         }
       }
@@ -213,5 +213,29 @@ li.deux-points {
       right: 0;
       bottom: 0;
     }
+  }
+}
+
+.d-none {
+  display: none;
+}
+
+.cover {
+  position: relative;
+  margin: 100px auto;
+  width: 600px;
+  img {
+    width: 600px;
+    height: auto;
+  }
+  .image-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+  }
+  .image-hover:hover {
+    opacity: 1;
   }
 }

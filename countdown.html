@@ -1,121 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/countdown.css" />
+    <link rel="stylesheet" href="./assets/css/histoire.css" />
+    <title>Coming soon...</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./assets/css/countdown.css" />
-  <title>Coming soon...</title>
-</head>
-
-<body>
-  <div class="header-wrapper">
-    <div class="zoominheader">
-      <div class="zoomoutheader">
-        <nav>
-          <img src="./assets/images/logo.png" alt="" />
-        </nav>
-        <div class="timer">
-          <div class="wrapper-time">
-            <div id="countdown">
-              <ul>
-                <li>Hours<span id="hours"></span></li>
-                <li class="deux-points">:</li>
-                <li>Minutes<span id="minutes"></span></li>
-                <li class="deux-points">:</li>
-                <li>Seconds<span id="seconds"></span></li>
-              </ul>
+  <body>
+    <div class="header-wrapper">
+      <div class="zoominheader">
+        <div class="zoomoutheader">
+          <nav>
+            <img src="./assets/images/logo.png" alt="" />
+          </nav>
+          <div class="timer">
+            <div class="wrapper-time">
+              <div id="countdown">
+                <ul>
+                  <li>Hours<span id="hours"></span></li>
+                  <li class="deux-points">:</li>
+                  <li>Minutes<span id="minutes"></span></li>
+                  <li class="deux-points">:</li>
+                  <li>Seconds<span id="seconds"></span></li>
+                </ul>
+              </div>
+              <div id="the-final-countdown">
+                <p></p>
+              </div>
             </div>
-            <div id="the-final-countdown">
-              <p></p>
-            </div>
-          </div>
-          <a class="green-button" id="button-disappear" href="./histoire.html">Découvrir la suite</a>
-        </div>
-      </div>
-    </div>
-    <div class="block-rs">
-      <div class="rs">
-        <img src="./assets/images/facebook.svg" alt="" />
-      </div>
-      <div class="rs">
-        <img src="./assets/images/instagram.svg" alt="" />
-      </div>
-      <div class="rs">
-        <img src="./assets/images/twitter.svg" alt="" />
-      </div>
-    </div>
-    <div class="wrapper-post-timer">
-      <div class="buttons">
-        <a href="#" class="green-button">Pré-commander</a>
-        <a href="#tracklist" class="black-button">Voir la tracklist</a>
-      </div>
-      <div class="banner-qlf">
-        <img src="./assets/images/blue-banner.png" alt="" />
-      </div>
-      <div id="tracklist">
-        <div class="wrapper-list">
-          <div class="left">
-            <ol>
-              <li>
-                <hr class="tiret"><span>Hégire</span>
-              </li>
-              <li>
-                <hr class="tiret"><span>A l'agonie</span>
-              </li>
-              <li>
-                <hr class="tiret"><span>Résurgence</span>
-              </li>
-              <li>
-                <hr class="tiret"><span>Tour Eiffel</span>
-              </li>
-              <li>
-                <hr class="tiret"><span>Himalaya</span>
-              </li>
-              <li>
-                <hr class="tiret"><span>Big Bang</span>
-              </li>
-              <li>
-                <hr class="tiret"><span>Sora</span>
-              </li>
-            </ol>
-          </div>
-          <div class="right">
-            <ol start="8">
-              <li>
-                <hr class="tiret"><span>Planète namek</span>
-              </li>
-              <li>
-                <hr class="tiret"><span>N.A.S.A</span>
-              </li>
-              <li>
-                <hr class="tiret"><span>Enigma</span>
-              </li>
-              <li>
-                <hr class="tiret"><span>Le coeur qui brûle</span>
-              </li>
-              <li>
-                <hr class="tiret"><span>Sauver la Terre</span>
-              </li>
-              <li>
-                <hr class="tiret"><span>Supernova</span>
-              </li>
-              <li>
-                <hr class="tiret"><span>Tarik et Nabil</span>
-              </li>
-            </ol>
+            <a class="green-button" id="button-disappear" href="./histoire.html"
+              >Découvrir la suite</a
+            >
           </div>
         </div>
       </div>
-      <footer>
-        <img id="moon-footer" src="./assets/images/footer-moon.png" alt="">
-        <img id="shade" src="./assets/images/green-shade.png" alt="">
-      </footer>
+      <div class="block-rs">
+        <div class="rs">
+          <img src="./assets/images/facebook.svg" alt="" />
+        </div>
+        <div class="rs">
+          <img src="./assets/images/instagram.svg" alt="" />
+        </div>
+        <div class="rs">
+          <img src="./assets/images/twitter.svg" alt="" />
+        </div>
+      </div>
+      <div class="wrapper-post-timer">
+        <div class="buttons">
+          <a href="#" class="green-button">Pré-commander</a>
+          <a href="#tracklist" class="black-button">Voir la tracklist</a>
+        </div>
+        <div class="banner-qlf">
+          <img src="./assets/images/blue-banner.png" alt="" />
+        </div>
+        <div class="cover">
+          <img
+            class="image-main"
+            src="./assets/images/cover.png"
+            alt="Cover PNL"
+          />
+          <img
+            class="image-hover"
+            src="./assets/images/tracklist.png"
+            alt="Tracklist"
+          />
+        </div>
+        <div id="tracklist">
+          <div class="wrapper-list">
+            <div class="left">
+              <ol>
+                <li>
+                  <hr class="tiret" />
+                  <span>Hégire</span>
+                </li>
+                <li>
+                  <hr class="tiret" />
+                  <span>A l'agonie</span>
+                </li>
+                <li>
+                  <hr class="tiret" />
+                  <span>Résurgence</span>
+                </li>
+                <li>
+                  <hr class="tiret" />
+                  <span>Tour Eiffel</span>
+                </li>
+                <li>
+                  <hr class="tiret" />
+                  <span>Himalaya</span>
+                </li>
+                <li>
+                  <hr class="tiret" />
+                  <span>Big Bang</span>
+                </li>
+                <li>
+                  <hr class="tiret" />
+                  <span>Sora</span>
+                </li>
+              </ol>
+            </div>
+            <div class="right">
+              <ol start="8">
+                <li>
+                  <hr class="tiret" />
+                  <span>Planète namek</span>
+                </li>
+                <li>
+                  <hr class="tiret" />
+                  <span>N.A.S.A</span>
+                </li>
+                <li>
+                  <hr class="tiret" />
+                  <span>Enigma</span>
+                </li>
+                <li>
+                  <hr class="tiret" />
+                  <span>Le coeur qui brûle</span>
+                </li>
+                <li>
+                  <hr class="tiret" />
+                  <span>Sauver la Terre</span>
+                </li>
+                <li>
+                  <hr class="tiret" />
+                  <span>Supernova</span>
+                </li>
+                <li>
+                  <hr class="tiret" />
+                  <span>Tarik et Nabil</span>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <img id="moon-footer" src="./assets/images/footer-moon.png" alt="" />
+          <img id="shade" src="./assets/images/green-shade.png" alt="" />
+        </footer>
+      </div>
+      <!-- Première page -->
+      <section class="histoire">
+        <div class="qlf-wrapper" id="que-la-famille">
+          <img src="./assets/images/qlf.png" alt="" class="background" />
+          <div class="text-left">
+            <h4 class="date">02 . 03 . 2015</h4>
+            <h1>Que la famille</h1>
+            <p>
+              Que la famille est le premier EP du duo de rap français PNL, sorti
+              le 2 mars 2015 sous le label QLF Records. L'EP précède leur
+              premier album studio, Le Monde Chico. Il a été enregistré, mixé et
+              masterisé par Nikola Feve "Nk.F".
+            </p>
+            <p>
+              Si ce premier EP n’a pas fonctionné lors de sa sortie, il a reçu
+              un vrai plébiscite de la part de la presse spécialisée. Il va
+              falloir attendre la sortie du clip « Le Monde ou Rien » pour voir
+              PNL déferler sur le rap français et que ce projet soit écouter par
+              un large audimat.
+            </p>
+            <a href="#le-monde-chico" class="pink-button btn-qlf"
+              >Voir la suite</a
+            >
+          </div>
+          <div class="block-musique-right">
+            <img src="./assets/images/qlf-logo.png" alt="" id="pochette" />
+            <p>Que la famille</p>
+            <h3>Je vis, je visser</h3>
+            <button id="btn-jevis" onClick="togglePlayJeVis()">
+              <lottie-player
+                id="player-jevis"
+                src="https://assets5.lottiefiles.com/packages/lf20_rRD7hy.json"
+                background="transparent"
+                speed="0.5"
+                style="width: 32px; height: 32px"
+                loop
+                ><audio
+                  muted="muted"
+                  autoplay="true"
+                  id="audio-je-vis"
+                  src="./assets/sounds/pnl-je-vis-je-visser.mp3"
+                >
+                  Your browser does not support the <code>audio</code> element.
+                </audio></lottie-player
+              >
+            </button>
+          </div>
+        </div>
 
+        <div class="banner-qlf">
+          <img src="./assets/images/red-banner.png" alt="" />
+        </div>
+
+        <!-- Deuxième page le monde chico -->
+        <div class="qlf-wrapper" id="le-monde-chico">
+          <img
+            src="./assets/images/lmc-background.png"
+            alt=""
+            class="background"
+          />
+          <div class="text-right">
+            <h4 class="date">30 . 10 . 2015</h4>
+            <div class="deux">
+              <h1>Le monde chico</h1>
+              <img src="./assets/images/red-trait.png" alt="" />
+            </div>
+            <p class="p-dll">
+              Le Monde Chico est le premier album studio du duo de rap français
+              PNL, sorti le 30 octobre 2015 sous le label QLF Records.
+            </p>
+            <p>
+              Lors de la première semaine d'exploitation, Le Monde Chico se vend
+              à plus de 15 000 exemplaires alors que l'album est fait en
+              indépendant. Au bout de cinq mois de commercialisation, l'album
+              est certifié disque d'or en atteignant le cap des 50 000 ventes et
+              est aujourd'hui triple disque de platine avec plus de 300 000
+              ventes.
+            </p>
+            <div class="wrapper-btn">
+              <a href="#dans-la-legende" class="red-button btn-qlf"
+                >Voir la suite</a
+              >
+            </div>
+          </div>
+          <div class="block-musique-left">
+            <img src="./assets/images/lemonde-logo.png" alt="" id="pochette" />
+            <p>Le monde chico</p>
+            <h3>Le monde ou rien</h3>
+            <button onclick="togglePlayLeMonde()">
+              <lottie-player
+                id="player-lemonde"
+                src="https://assets5.lottiefiles.com/packages/lf20_rRD7hy.json"
+                background="transparent"
+                speed="1"
+                style="width: 32px; height: 32px"
+                loop
+              ></lottie-player>
+              <audio
+                muted="muted"
+                autoplay="false"
+                id="audio-le-monde"
+                src="./assets/sounds/pnl-le-monde-ou-rien.mp3"
+              >
+                Your browser does not support the <code>audio</code> element.
+              </audio>
+            </button>
+          </div>
+        </div>
+
+        <div class="banner-qlf">
+          <img src="./assets/images/orange-banner.png" alt="" />
+        </div>
+
+        <!-- Troisième page Dans la légende -->
+        <div class="qlf-wrapper" id="dans-la-legende">
+          <img
+            src="./assets/images/dll-background.png"
+            alt=""
+            class="background"
+          />
+          <div class="text-left">
+            <h4 class="date">02 . 03 . 2016</h4>
+            <div class="dll">
+              <h1>Dans la légende</h1>
+              <img src="./assets/images/orange-trait.png" />
+            </div>
+            <p class="p-dll">
+              Que la famille est le premier EP du duo de rap français PNL, sorti
+              le 2 mars 2015 sous le label QLF Records. L'EP précède leur
+              premier album studio, Le Monde Chico. Il a été enregistré, mixé et
+              masterisé par Nikola Feve "Nk.F".
+            </p>
+            <p>
+              Si ce premier EP n’a pas fonctionné lors de sa sortie, il a reçu
+              un vrai plébiscite de la part de la presse spécialisée. Il va
+              falloir attendre la sortie du clip « Le Monde ou Rien » pour voir
+              PNL déferler sur le rap français et que ce projet soit écouter par
+              un large audimat.
+            </p>
+            <a href="#deux-freres" class="orange-button btn-qlf"
+              >Voir la suite</a
+            >
+          </div>
+          <div class="block-musique-right">
+            <img src="./assets/images/dll-logo.png" alt="" id="pochette" />
+            <p>Dans la légende</p>
+            <h3>DA</h3>
+            <button onclick="togglePlayDa()">
+              <lottie-player
+                src="https://assets5.lottiefiles.com/packages/lf20_rRD7hy.json"
+                background="transparent"
+                speed="0.5"
+                style="width: 32px; height: 32px"
+                loop
+                id="player-da"
+              ></lottie-player>
+              <audio
+                muted="muted"
+                autoplay="false"
+                id="audio-da"
+                src="./assets/sounds/pnl-da.mp3"
+              >
+                Your browser does not support the <code>audio</code> element.
+              </audio>
+            </button>
+          </div>
+        </div>
+
+        <div class="banner-qlf">
+          <img src="./assets/images/purple-banner.png" alt="" />
+        </div>
+
+        <!-- Quatrième page Deux frères -->
+        <div class="qlf-wrapper" id="deux-freres">
+          <img
+            src="./assets/images/deux-background.png"
+            alt=""
+            class="background"
+          />
+          <div class="text-right">
+            <h4 class="date">05 . 04 . 2019</h4>
+            <div class="deux">
+              <h1>Deux frères</h1>
+              <img src="./assets/images/purple-trait.png" alt="" />
+            </div>
+            <p class="p-dll">
+              Que la famille est le premier EP du duo de rap français PNL, sorti
+              le 2 mars 2015 sous le label QLF Records. L'EP précède leur
+              premier album studio, Le Monde Chico. Il a été enregistré, mixé et
+              masterisé par Nikola Feve "Nk.F".
+            </p>
+            <p>
+              Si ce premier EP n’a pas fonctionné lors de sa sortie, il a reçu
+              un vrai plébiscite de la part de la presse spécialisée. Il va
+              falloir attendre la sortie du clip « Le Monde ou Rien » pour voir
+              PNL déferler sur le rap français et que ce projet soit écouter par
+              un large audimat.
+            </p>
+          </div>
+          <div class="wrapper-btn-center">
+            <a href="#" class="purple-button btn-qlf">Revenir à l'accueil</a>
+          </div>
+          <div class="block-musique-left">
+            <img src="./assets/images/2freres-logo.png" alt="" id="pochette" />
+            <p>Deux frères</p>
+            <h3>Au DD</h3>
+            <button onclick="togglePlayDd()">
+              <lottie-player
+                src="https://assets5.lottiefiles.com/packages/lf20_rRD7hy.json"
+                background="transparent"
+                speed="0.5"
+                style="width: 32px; height: 32px"
+                loop
+                id="player-dd"
+              ></lottie-player>
+              <audio
+                muted="muted"
+                autoplay="false"
+                id="audio-dd"
+                src="./assets/sounds/pnl-dd.mp3"
+              >
+                Your browser does not support the <code>audio</code> element.
+              </audio>
+            </button>
+          </div>
+        </div>
+
+        <footer>
+          <div class="banner-qlf">
+            <img src="./assets/images/blue-banner.png" alt="" />
+          </div>
+          <img src="./assets/images/shadow.png" id="shadow" alt="" />
+          <img src="./assets/images/lune.png" id="lune" alt="" />
+
+          <div class="block-rs">
+            <div class="rs">
+              <img src="./assets/images/facebook.svg" alt="" />
+            </div>
+            <div class="rs">
+              <img src="./assets/images/instagram.svg" alt="" />
+            </div>
+            <div class="rs">
+              <img src="./assets/images/twitter.svg" alt="" />
+            </div>
+          </div>
+        </footer>
+      </section>
+
+      <script src="./assets/js/jquery.min.js"></script>
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+      <script src="./assets/js/histoire.js"></script>
     </div>
-  </div>
-  <script src="./assets/js/jquery.min.js"></script>
-  <script src="./assets/js/countdown.js"></script>
-</body>
-
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/countdown.js"></script>
+  </body>
 </html>
