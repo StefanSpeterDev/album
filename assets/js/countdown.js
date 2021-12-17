@@ -46,7 +46,7 @@ function startTimer(duration, houres, min, sec) {
 }
 
 jQuery(function ($) {
-  var fiveMinutes = 60 * 0.16;
+  var fiveMinutes = 60 * 0.03;
   $(".wrapper-post-timer").hide();
   $("section.histoire").hide();
   min = $("#minutes");
