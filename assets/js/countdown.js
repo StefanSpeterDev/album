@@ -32,7 +32,7 @@ function startTimer(duration, houres, min, sec) {
       moon
         .css(
           "background-image",
-          'url("' + "../assets/images/background.jpg" + '")'
+          'url("' + "./assets/images/background-final.jpg" + '")'
         ) //Change BG
         .fadeIn(); //FadeIn
       $(".header-wrapper .block-rs").css("top", "30%");
@@ -46,7 +46,7 @@ function startTimer(duration, houres, min, sec) {
 }
 
 jQuery(function ($) {
-  var fiveMinutes = 60 * 0.06;
+  var fiveMinutes = 60 * 0.16;
   $(".wrapper-post-timer").hide();
   $("section.histoire").hide();
   min = $("#minutes");
