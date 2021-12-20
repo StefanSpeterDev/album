@@ -25,9 +25,9 @@ function startTimer(duration, houres, min, sec) {
       moon.css({
         "background-size": "cover",
         "height": "100%",
-        "animation": "moonup 6s ease-in forwards",
+        "animation": "moonup 3s forwards",
         "overflow": "visible",
-        "margin-top": "-250px"
+        "margin-top": "-250px",
       });
       moon
         .css(
@@ -40,13 +40,13 @@ function startTimer(duration, houres, min, sec) {
       setTimeout(function(){
         $('.wrapper-post-timer').fadeIn('slow');
         $('section.histoire').fadeIn('slow');
-    },5500);
+    },2500);
     }
   }, 1000);
 }
 
 jQuery(function ($) {
-  var fiveMinutes = 60 * 0.03;
+  var fiveMinutes = 60 * 0.5;
   $(".wrapper-post-timer").hide();
   $("section.histoire").hide();
   min = $("#minutes");
